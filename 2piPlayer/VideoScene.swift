@@ -9,6 +9,8 @@
 import SpriteKit
 
 class VideoScene: SKView {
+    
+    let camera = SKCameraNode()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -16,20 +18,23 @@ class VideoScene: SKView {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
         commonInit()
     }
     
     private func commonInit() {
         let scene = SKScene(size: self.bounds.size)
+        scene.camera = camera
+        camera.position = .zero
         self.presentScene(scene)
         let url = URL(string: "https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8")!
         let vidScene = SKVideoNode(url: url)
         vidScene.position = CGPoint.zero
-        vidScene.anchorPoint = CGPoint.zero
         vidScene.size = self.bounds.size
         self.scene?.addChild(vidScene)
         vidScene.play()
+        
+        
         
         
         

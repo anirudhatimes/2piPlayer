@@ -20,16 +20,25 @@ class MotionManager {
         return manager.isDeviceMotionAvailable
     }
     
+    var currentMotionData: CMDeviceMotion? {
+        return manager.deviceMotion
+    }
+    
     func startMonitoringDeviceMotion() {
-        manager.deviceMotionUpdateInterval = 0.5
-        manager.startDeviceMotionUpdates()
+        manager.deviceMotionUpdateInterval = 1.0 / 60.0
         
-        let queue = OperationQueue.main
-        manager.startDeviceMotionUpdates(to: queue) { [weak self] (motion, error) in
-            if let motion = motion {
-                self?.analyze(motion: motion)
-            }
-        }
+//        manager.startDeviceMotionUpdates()
+        let referenceFrame = CMAttitudeReferenceFrame.xArbitraryZVertical
+        manager.startDeviceMotionUpdates(using: referenceFrame)
+        
+//        let queue = OperationQueue.main
+//        manager.startDeviceMotionUpdates(to: queue) { [weak self] (motion, error) in
+//            if let motion = motion {
+//                self?.analyze(motion: motion)
+//            }
+//        }
+        
+        
     }
     
     func stopMonitoringDeviceMotion() {
@@ -37,20 +46,27 @@ class MotionManager {
     }
     
     private func analyze(motion: CMDeviceMotion) {
-        // roll - around x
-        // pitch - around z
-        // yaw - around y
+        
         let attitude = motion.attitude
         let roll = attitude.roll.toDegree
         let pitch = attitude.pitch.toDegree
         let yaw = attitude.yaw.toDegree
         print("Roll: \(roll) Pitch: \(pitch) Yaw: \(yaw)")
+        print("Gravity: \(motion.gravity)")
     }
-    
 }
+
+typealias Degree = Double
+typealias Radian = Double
+
 extension Double {
-    typealias Degree = Double
-    var toDegree: Double {
+    var toDegree: Degree {
         return 180.0 / Double.pi * self
+    }
+}
+
+extension Double {
+    var toRadians: Radian {
+        return self * Double.pi / 180.0
     }
 }
