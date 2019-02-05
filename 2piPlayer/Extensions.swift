@@ -35,3 +35,16 @@ extension UIView {
             ])
     }
 }
+
+extension UIImage {
+    func cropped(in rect: CGRect) -> UIImage? {
+        var scaledRect = rect
+        if (scale > 1) {
+            scaledRect = rect.applying(CGAffineTransform(scaleX: scale, y: scale))
+        }
+        guard let croppedCGImage = self.cgImage?.cropping(to: scaledRect) else {
+            return nil
+        }
+        return UIImage(cgImage: croppedCGImage, scale: scale, orientation: imageOrientation)
+    }
+}
