@@ -14,6 +14,7 @@
 		5785287822096696000CEBFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5785287622096696000CEBFD /* LaunchScreen.storyboard */; };
 		57852880220966FF000CEBFD /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5785287F220966FF000CEBFD /* Player.swift */; };
 		5785288222096765000CEBFD /* VideoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5785288122096765000CEBFD /* VideoScene.swift */; };
+		57852884220970C1000CEBFD /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57852883220970C1000CEBFD /* MotionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5785287922096696000CEBFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5785287F220966FF000CEBFD /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		5785288122096765000CEBFD /* VideoScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScene.swift; sourceTree = "<group>"; };
+		57852883220970C1000CEBFD /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				5785286D22096695000CEBFD /* AppDelegate.swift */,
 				5785286F22096695000CEBFD /* ViewController.swift */,
+				57852883220970C1000CEBFD /* MotionManager.swift */,
 				5785287F220966FF000CEBFD /* Player.swift */,
 				5785288122096765000CEBFD /* VideoScene.swift */,
 				5785287122096695000CEBFD /* Main.storyboard */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5785288222096765000CEBFD /* VideoScene.swift in Sources */,
+				57852884220970C1000CEBFD /* MotionManager.swift in Sources */,
 				5785287022096695000CEBFD /* ViewController.swift in Sources */,
 				57852880220966FF000CEBFD /* Player.swift in Sources */,
 				5785286E22096695000CEBFD /* AppDelegate.swift in Sources */,

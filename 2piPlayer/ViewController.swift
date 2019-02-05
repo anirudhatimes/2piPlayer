@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import CoreMotion
 
 class ViewController: UIViewController {
     
@@ -15,8 +16,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let scene = VideoScene(frame: view.bounds)
-        view.addSubview(scene)
+//        let scene = VideoScene(frame: view.bounds)
+//        view.addSubview(scene)
+        
+        MotionManager.shared.startMonitoringDeviceMotion()
         
     }
 
