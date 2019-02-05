@@ -12,9 +12,9 @@
 		5785287322096695000CEBFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5785287122096695000CEBFD /* Main.storyboard */; };
 		5785287522096696000CEBFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5785287422096696000CEBFD /* Assets.xcassets */; };
 		5785287822096696000CEBFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5785287622096696000CEBFD /* LaunchScreen.storyboard */; };
-		57852880220966FF000CEBFD /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5785287F220966FF000CEBFD /* Player.swift */; };
 		5785288222096765000CEBFD /* VideoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5785288122096765000CEBFD /* VideoScene.swift */; };
 		57852884220970C1000CEBFD /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57852883220970C1000CEBFD /* MotionManager.swift */; };
+		578528882209B430000CEBFD /* SphereSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578528872209B430000CEBFD /* SphereSceneView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +25,9 @@
 		5785287422096696000CEBFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5785287722096696000CEBFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5785287922096696000CEBFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5785287F220966FF000CEBFD /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		5785288122096765000CEBFD /* VideoScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScene.swift; sourceTree = "<group>"; };
 		57852883220970C1000CEBFD /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		578528872209B430000CEBFD /* SphereSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereSceneView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +63,7 @@
 				5785286D22096695000CEBFD /* AppDelegate.swift */,
 				5785286F22096695000CEBFD /* ViewController.swift */,
 				57852883220970C1000CEBFD /* MotionManager.swift */,
-				5785287F220966FF000CEBFD /* Player.swift */,
+				578528872209B430000CEBFD /* SphereSceneView.swift */,
 				5785288122096765000CEBFD /* VideoScene.swift */,
 				5785287122096695000CEBFD /* Main.storyboard */,
 				5785287422096696000CEBFD /* Assets.xcassets */,
@@ -147,7 +147,7 @@
 				5785288222096765000CEBFD /* VideoScene.swift in Sources */,
 				57852884220970C1000CEBFD /* MotionManager.swift in Sources */,
 				5785287022096695000CEBFD /* ViewController.swift in Sources */,
-				57852880220966FF000CEBFD /* Player.swift in Sources */,
+				578528882209B430000CEBFD /* SphereSceneView.swift in Sources */,
 				5785286E22096695000CEBFD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
