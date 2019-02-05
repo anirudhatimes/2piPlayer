@@ -58,9 +58,11 @@ class SphereSceneView: SCNView {
     
     func set(roll: Float, pitch: Float, yaw: Float) {
         // https://developer.apple.com/documentation/coremotion/getting_processed_device-motion_data/understanding_reference_frames_and_device_attitude#2875084
-        rollNode.eulerAngles.x = roll
-        pitchNode.eulerAngles.z = pitch
-        yawNode.eulerAngles.y = yaw
+        let range = -Float.pi...Float.pi
+        
+        rollNode.eulerAngles.x = roll.clamped(in: range)
+        pitchNode.eulerAngles.z = pitch.clamped(in: range)
+        yawNode.eulerAngles.y = yaw.clamped(in: range)
     }
     
     func set(contents: Any) {
@@ -75,5 +77,11 @@ class SphereSceneView: SCNView {
         sphereNode.geometry?.firstMaterial?.diffuse.contentsTransform = transform
         sphereNode.position = SCNVector3(x: 0, y: 0, z: 0)
         self.scene?.rootNode.addChildNode(sphereNode)
+    }
+}
+
+fileprivate extension Float {
+    func clamped(in range: ClosedRange<Float>) -> Float {
+        return max(max(range.lowerBound, self), min(self, range.upperBound))
     }
 }
