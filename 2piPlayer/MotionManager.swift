@@ -55,18 +55,3 @@ class MotionManager {
         print("Gravity: \(motion.gravity)")
     }
 }
-
-typealias Degree = Double
-typealias Radian = Double
-
-extension Double {
-    var toDegree: Degree {
-        return 180.0 / Double.pi * self
-    }
-}
-
-extension Double {
-    var toRadians: Radian {
-        return self * Double.pi / 180.0
-    }
-}
