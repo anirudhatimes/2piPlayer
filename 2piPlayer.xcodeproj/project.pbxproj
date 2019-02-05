@@ -13,6 +13,7 @@
 		5785287522096696000CEBFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5785287422096696000CEBFD /* Assets.xcassets */; };
 		5785287822096696000CEBFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5785287622096696000CEBFD /* LaunchScreen.storyboard */; };
 		57852880220966FF000CEBFD /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5785287F220966FF000CEBFD /* Player.swift */; };
+		5785288222096765000CEBFD /* VideoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5785288122096765000CEBFD /* VideoScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5785287722096696000CEBFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5785287922096696000CEBFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5785287F220966FF000CEBFD /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		5785288122096765000CEBFD /* VideoScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				5785286D22096695000CEBFD /* AppDelegate.swift */,
 				5785286F22096695000CEBFD /* ViewController.swift */,
 				5785287F220966FF000CEBFD /* Player.swift */,
+				5785288122096765000CEBFD /* VideoScene.swift */,
 				5785287122096695000CEBFD /* Main.storyboard */,
 				5785287422096696000CEBFD /* Assets.xcassets */,
 				5785287622096696000CEBFD /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5785288222096765000CEBFD /* VideoScene.swift in Sources */,
 				5785287022096695000CEBFD /* ViewController.swift in Sources */,
 				57852880220966FF000CEBFD /* Player.swift in Sources */,
 				5785286E22096695000CEBFD /* AppDelegate.swift in Sources */,
