@@ -30,6 +30,12 @@ class VideoPlayerView: UIView {
         return s
     }()
     
+    private lazy var panGesture: UIPanGestureRecognizer = {
+        let p = UIPanGestureRecognizer(target: self, action: #selector(self.viewPanned(_:)))
+        self.addGestureRecognizer(p)
+        return p
+    }()
+    
     var isMotionControlsEnabled = true {
         didSet {
             if (isMotionControlsEnabled) {
@@ -37,6 +43,12 @@ class VideoPlayerView: UIView {
             } else {
                 MotionManager.shared.stopMonitoringDeviceMotion()
             }
+        }
+    }
+    
+    var isGestureControlsEnabled = false {
+        didSet {
+            panGesture.isEnabled = isGestureControlsEnabled
         }
     }
     
@@ -50,12 +62,38 @@ class VideoPlayerView: UIView {
         commonInit()
     }
     
+    deinit {
+        MotionManager.shared.stopMonitoringDeviceMotion()
+    }
+    
     private func commonInit() {
 //        sphereSceneView.fill(in: self)
         self.addSubview(sphereSceneView)
         isMotionControlsEnabled = true
+        isGestureControlsEnabled = true
     }
     
+    @objc private func viewPanned(_ gesture: UIPanGestureRecognizer) {
+        switch gesture.state {
+        case .began:
+            break
+        case .changed:
+            
+            // Roll - along x axis
+            // Pitch - along y axis
+            // Yaw -
+            
+            let translation = gesture.translation(in: gesture.view)
+            set(roll: translation.x/self.bounds.width, pitch: translation.y/self.bounds.height, yaw: 0)
+            
+            break
+        default:
+            break
+        }
+    }
+}
+
+extension VideoPlayerView {
     func play(url: URL?) {
         guard let url = url else {
             return
@@ -75,6 +113,10 @@ class VideoPlayerView: UIView {
         }
         
         player?.play()
+    }
+    
+    func set(roll: CGFloat, pitch: CGFloat, yaw: CGFloat) {
+        set(roll: Float(roll), pitch: Float(pitch), yaw: Float(yaw))
     }
     
     func set(roll: Float, pitch: Float, yaw: Float) {
