@@ -30,12 +30,6 @@ class VideoPlayerView: UIView {
         return s
     }()
     
-    private lazy var panGesture: UIPanGestureRecognizer = {
-        let p = UIPanGestureRecognizer(target: self, action: #selector(self.viewPanned(_:)))
-        self.addGestureRecognizer(p)
-        return p
-    }()
-    
     var isMotionControlsEnabled = true {
         didSet {
             if (isMotionControlsEnabled) {
@@ -43,12 +37,6 @@ class VideoPlayerView: UIView {
             } else {
                 MotionManager.shared.stopMonitoringDeviceMotion()
             }
-        }
-    }
-    
-    var isGestureControlsEnabled = false {
-        didSet {
-            panGesture.isEnabled = isGestureControlsEnabled
         }
     }
     
@@ -70,7 +58,6 @@ class VideoPlayerView: UIView {
 //        sphereSceneView.fill(in: self)
         self.addSubview(sphereSceneView)
         isMotionControlsEnabled = true
-        isGestureControlsEnabled = true
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.viewTapped))
         self.addGestureRecognizer(tap)
@@ -83,25 +70,6 @@ class VideoPlayerView: UIView {
             player?.pause()
         }
         pauseFlag.toggle()
-    }
-    
-    @objc private func viewPanned(_ gesture: UIPanGestureRecognizer) {
-        switch gesture.state {
-        case .began:
-            break
-        case .changed:
-            
-            // Roll - along x axis
-            // Pitch - along y axis
-            // Yaw -
-            
-            let translation = gesture.translation(in: gesture.view)
-            set(roll: translation.x/self.bounds.width, pitch: translation.y/self.bounds.height, yaw: 0)
-            
-            break
-        default:
-            break
-        }
     }
 }
 
