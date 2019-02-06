@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		575377932209EF3700F9E2D2 /* SeekThumbModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575377922209EF3700F9E2D2 /* SeekThumbModel.swift */; };
 		57720A7A220ADD98002FC39B /* MotionSeekVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57720A79220ADD98002FC39B /* MotionSeekVC.swift */; };
 		5785286E22096695000CEBFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5785286D22096695000CEBFD /* AppDelegate.swift */; };
 		5785287022096695000CEBFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5785286F22096695000CEBFD /* ViewController.swift */; };
@@ -22,7 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		575377922209EF3700F9E2D2 /* SeekThumbModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekThumbModel.swift; sourceTree = "<group>"; };
 		57720A79220ADD98002FC39B /* MotionSeekVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionSeekVC.swift; sourceTree = "<group>"; };
 		5785286A22096695000CEBFD /* 2piPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2piPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5785286D22096695000CEBFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 				57852883220970C1000CEBFD /* MotionManager.swift */,
 				578528872209B430000CEBFD /* SphereSceneView.swift */,
 				5785288D2209D7AD000CEBFD /* VideoPlayerView.swift */,
-				575377922209EF3700F9E2D2 /* SeekThumbModel.swift */,
 				5785288B2209D677000CEBFD /* Constants.swift */,
 				5785288F2209DB18000CEBFD /* Extensions.swift */,
 				5785287122096695000CEBFD /* Main.storyboard */,
@@ -156,7 +153,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				575377932209EF3700F9E2D2 /* SeekThumbModel.swift in Sources */,
 				57720A7A220ADD98002FC39B /* MotionSeekVC.swift in Sources */,
 				5785288E2209D7AD000CEBFD /* VideoPlayerView.swift in Sources */,
 				57852884220970C1000CEBFD /* MotionManager.swift in Sources */,
