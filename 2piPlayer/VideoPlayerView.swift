@@ -71,6 +71,18 @@ class VideoPlayerView: UIView {
         self.addSubview(sphereSceneView)
         isMotionControlsEnabled = true
         isGestureControlsEnabled = true
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.viewTapped))
+        self.addGestureRecognizer(tap)
+    }
+    var pauseFlag = false
+    @objc private func viewTapped() {
+        if (pauseFlag) {
+            player?.play()
+        } else {
+            player?.pause()
+        }
+        pauseFlag.toggle()
     }
     
     @objc private func viewPanned(_ gesture: UIPanGestureRecognizer) {
